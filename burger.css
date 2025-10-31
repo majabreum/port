@@ -12,7 +12,7 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	background: #222;
+	background: #638A9E;
 	color: white;
 	height: 110px;
 	padding: 1rem;
@@ -23,6 +23,7 @@
 	flex-direction: row;
 	list-style-type: none;
 	
+	
 }
 
 .menu > li {
@@ -31,7 +32,7 @@
 }
 
 .menu-box {
-	background: red;
+	background: #638A9E;
 	height: 100%;
 	width: 30px;
 	cursor: pointer;
