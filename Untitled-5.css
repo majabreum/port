@@ -76,6 +76,8 @@ body{
 	color: white;
 	height: 10px;
 	padding: 1rem;
+	
+	
 }
 
 .menu {
@@ -110,11 +112,14 @@ body{
 	border-radius: 2px;
 }
 
-.menu" {
+.menu{
 	margin: 0px;
 	padding: 0px;
 	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
 }
+
+
+	
 
 .menu-icon::before {
 	
@@ -203,4 +208,10 @@ body{
 	flex-flow: wrap;
 	flex-direction: row;
 	justify-content: space-around;
+	
+
+	
+	
+	
+	
 
