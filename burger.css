@@ -123,6 +123,10 @@
 		color: white;
 		background: #222;
 	}
-	
-	}
+
+}
+ .welcome h1 {
+    font-family: "skope", serif;
+	font-weight: 1100;
+	font-style: normal;
 }
