@@ -14,7 +14,7 @@
 	justify-content: space-between;
 	background: #222;
 	color: white;
-	height: 110px;
+	height: 90px;
 	padding: 1rem;
 }
 
@@ -28,3 +28,100 @@
 	padding: 10px;
 	overflow: hidden;
 }
+.menu-box{
+	background: red;
+	height: 100%;
+	width: 30px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.menu-icon, .menu-icon::before, .menu-icon::after{
+	display: block;
+	background: white;
+	position: absolute;
+	height: 4px;
+	width: 30px; 
+	transition: transform 400ms; 
+	border-radius: 2px; 
+	
+}
+.menu-icon::before{
+	content:"";
+	margin-top: -8px;
+}
+
+.menu-icon::after{
+	content:"";
+	margin-top: 8px;
+}
+	
+#menu-activate:checked + .menu-box, .menu-icon::before{
+	margin-top: 0px;
+	transform: rotate(45deg)
+} 
+
+#menu-activate:checked + .menu-box, .menu-icon{
+	margin-top: 0px;
+	transform: rgba(255, 255, 255, 0)
+} 
+
+#menu-activate:checked + .menu-box, .menu-icon::after{
+	margin-top: 0px;
+	transform: rotate(-45deg)
+} 
+
+#menu-activate{
+	display: none;
+	
+} 
+@media(max-width: 700px){
+	.menu-box{
+		display: flex;
+	}
+	.menu{
+	position: absolute;
+		top: 0;
+		margin-top: 100px;
+		left: 0;
+		flex-direction: column;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		
+	}
+	
+	#menu-activate ~ .menu li {
+	height: 0;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	transition: height 400ms; 
+	display: none; 
+	}
+	
+	#menu-activate:checked ~.menu li {
+		border: 1px solid #333;
+		height: 2.5ms;
+		padding: 0.5em;
+		transition: height 400ms;
+		display: block;
+	}
+	
+	.menu > li {
+		display: flex;
+		margin: 0;
+		padding: 0.5em;
+		width: 100%;
+		color: white;
+		background: #222;
+	}
+}
+
+
+
+
+
+
