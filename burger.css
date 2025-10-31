@@ -1,34 +1,36 @@
 @charset "utf-8";
 /* CSS Document */
-
-*{
+* {
 	margin: 0px;
 	padding: 0px;
-	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
 }
 
-.menu-bar{
+.menu-bar {
+	
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
 	background: #222;
 	color: white;
-	height: 90px;
+	height: 110px;
 	padding: 1rem;
 }
 
-.menu{
+.menu {
 	display: flex;
 	flex-direction: row;
 	list-style-type: none;
 	
 }
-.menu >li{
+
+.menu > li {
 	padding: 10px;
 	overflow: hidden;
 }
-.menu-box{
+
+.menu-box {
 	background: red;
 	height: 100%;
 	width: 30px;
@@ -38,54 +40,58 @@
 	justify-content: center;
 	align-items: center;
 }
-.menu-icon, .menu-icon::before, .menu-icon::after{
+
+.menu-icon, .menu-icon::before, .menu-icon::after {
 	display: block;
 	background: white;
 	position: absolute;
 	height: 4px;
-	width: 30px; 
-	transition: transform 400ms; 
-	border-radius: 2px; 
-	
-}
-.menu-icon::before{
-	content:"";
-	margin-top: -8px;
+	width: 30px;
+	transition: transform 400ms;
+	border-radius: 2px;
 }
 
-.menu-icon::after{
+.menu-icon::before {
+	
+	content:"";
+	margin-top: -8px;
+	
+}
+.menu-icon::after {
 	content:"";
 	margin-top: 8px;
 }
-	
-#menu-activate:checked + .menu-box, .menu-icon::before{
+
+#menu-activate:checked + .menu-box, .menu-icon::before {
 	margin-top: 0px;
 	transform: rotate(45deg)
-} 
+}
 
-#menu-activate:checked + .menu-box, .menu-icon{
-	margin-top: 0px;
-	transform: rgba(255, 255, 255, 0)
-} 
+#menu-activate:checked + .menu-box, .menu-icon {
+	background: rgba(255, 255, 255, 0)
+}
 
-#menu-activate:checked + .menu-box, .menu-icon::after{
+#menu-activate:checked + .menu-box, .menu-icon::after {
 	margin-top: 0px;
 	transform: rotate(-45deg)
-} 
+}
 
-#menu-activate{
-	display: none;
+#menu-activate {
 	
-} 
-@media(max-width: 700px){
-	.menu-box{
+	display: none;
+}
+
+@media(max-width: 700px) {
+	
+	.menu-box {
 		display: flex;
 	}
-	.menu{
-	position: absolute;
+	
+	.menu {
+		position: absolute;
 		top: 0;
 		margin-top: 100px;
-		left: 0;
+		left:0;
 		flex-direction: column;
 		width: 100%;
 		justify-content: center;
@@ -94,17 +100,17 @@
 	}
 	
 	#menu-activate ~ .menu li {
-	height: 0;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	transition: height 400ms; 
-	display: none; 
+		height: 0;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		transition: height 400ms;
+		display: none;
 	}
 	
-	#menu-activate:checked ~.menu li {
+	#menu-activate:checked ~ .menu li {
 		border: 1px solid #333;
-		height: 2.5ms;
+		height: 2.5em;
 		padding: 0.5em;
 		transition: height 400ms;
 		display: block;
@@ -118,10 +124,7 @@
 		color: white;
 		background: #222;
 	}
+	
+	
 }
-
-
-
-
-
 
