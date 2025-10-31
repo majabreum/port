@@ -1,5 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
+body{
+	background: linear-gradient(to bottom, white, black);
+	 color: white; /* så teksten kan læses ovenpå den mørke farve */
+  font-size: 30px;
+	
+}
 * {
 	margin: 0px;
 	padding: 0px;
@@ -127,6 +133,6 @@
 }
  .welcome h1 {
     font-family: "skope", serif;
-	font-weight: 1100;
+	font-weight: 3300px;
 	font-style: normal;
 }
