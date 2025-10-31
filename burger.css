@@ -136,3 +136,13 @@ body{
 	font-weight: 3300px;
 	font-style: normal;
 }
+
+.flexbox{
+	background:white;
+	display: flex;
+	flex-flow: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+
+
+

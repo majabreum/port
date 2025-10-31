@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	
+	background-color: lightblue;
+}
+
+div{
+	width: 100px;
+	height: 100px;
+	background: #E247BC;
+	right: 24px;
+}
+
+div {
+	
+	animation-name: example ;
+	position: relative;
+	animation-duration: 4s; 
+}
+	
+	
+@keyframes example{
+		0% {background-color: aqua;}
+		50% {background-color: black;}
+		100%{background-color: palevioletred;}
+}
+	
+p {
+	
+	font-family: "rosalind", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 30px;
+}
+
+
+button {
+  background-color: lightgray;
+  border: 1px solid gray;
+  padding: 30px 60px;
+  font-size: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+}
+button:active {
+  background-color: purple;
+}
+		
