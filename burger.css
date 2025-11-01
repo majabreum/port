@@ -24,15 +24,17 @@ body{
 	padding: 1rem;
 }
 
-.menu {
+.menu1 {
 	display: flex;
 	flex-direction: row;
 	list-style-type: none;
+	color: white;
 }
 
-.menu > li {
+.menu1 > li {
 	padding: 10px;
 	overflow: hidden;
+
 }
 
 .menu-box {
@@ -120,7 +122,7 @@ body{
 		display: block;
 	}
 	
-	.menu > li {
+	.menu1 > li {
 		display: flex;
 		margin: 0;
 		padding: 0.5em;
@@ -143,5 +145,3 @@ body{
 	justify-content: space-around;
 
 
-.porty {
-}
