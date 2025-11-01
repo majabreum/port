@@ -112,9 +112,10 @@ body{
 	border-radius: 2px;
 }
 
-.menu{
+.menu1{
 	margin: 0px;
 	padding: 0px;
+	font-size: 30px;
 	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
 }
 
