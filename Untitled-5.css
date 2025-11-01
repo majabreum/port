@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 body{
-	background-color: white;
+	 background-image: url("../../../../../Billeder/Screenshots/Skærmbillede 2025-11-01 115937.png")
 }
 .red{
 	background: red;
@@ -59,13 +59,10 @@ body{
 	margin: 2px;
 }
 
-.button {
-	background-color: gray;
-	padding: 39px 24px; 
-	width: 200px;
-  	height: 60px; 
+.button{
+background: #638A9E
+	
 }
-
 .menu-bar {
 	
 	display: flex;
@@ -158,7 +155,7 @@ body{
 		display: flex;
 	}
 	
-	.menu {
+	.menu1 {
 		position: absolute;
 		top: 0;
 		margin-top: 100px;
@@ -170,7 +167,7 @@ body{
 		
 	}
 	
-	#menu-activate ~ .menu li {
+	#menu-activate ~ .menu1 li {
 		height: 0;
 		margin: 0;
 		padding: 0;
@@ -179,7 +176,7 @@ body{
 		display: none;
 	}
 	
-	#menu-activate:checked ~ .menu li {
+	#menu-activate:checked ~ .menu1 li {
 		border: 1px solid #333;
 		height: 2.5em;
 		padding: 0.5em;
