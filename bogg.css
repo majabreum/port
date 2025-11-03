@@ -1,68 +1,16 @@
 @charset "utf-8";
 /* CSS Document */
+
 body{
-	 background-image: url("{9E5CB89E-C286-4A67-B518-D5E020C37B6F}.png")
+	background-image:url("../../../../../Billeder/Screenshots/Skærmbillede 2025-11-03 110655.png")
+
 }
-.red{
-	background: red;
-	width: 500px;
-	height: 50px;
-}
-.blue{
-	background: brown;
-	width: 500px;
-	height: 50px;
-	position: sticky;
-	top: 10px;
-	right: 10px;
-}
-.green{
-	background: green;
-	min-width: 500px;
-	height: 50px;
-	
-}
-.purple{
-	background: purple;
-	width: 50%;
-	min-width: 100px;
-	height: 50px;
-	
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
 }
 
-.flexbox{
-	background:#638A9E;
-	display: flex;
-	flex-flow: wrap;
-	flex-direction: row;
-	justify-content: space-around;
-}
-
-.flexboxgalleri{
-	background-image: url("../{9E5CB89E-C286-4A67-B518-D5E020C37B6F}.png");
-	display: flex;
-	flex-flow: wrap;
-	flex-direction: row;
-	justify-content: space-around;
-}
-
-.text{
-	background-color: white;
-	height: 230px;
-	width: 200px;
-}
-.flexbox p{
-	font-size: 25px;
-	background: lightgray;
-	text-align: center;
-	width: 200px;
-	margin: 2px;
-}
-
-.button{
-background: #638A9E
-	
-}
 .menu-bar {
 	
 	display: flex;
@@ -73,9 +21,8 @@ background: #638A9E
 	color: white;
 	height: 10px;
 	padding: 1rem;
-	
-	
 }
+.forside
 
 .menu1 {
 	display: flex;
@@ -86,6 +33,8 @@ background: #638A9E
 .menu1 > li {
 	padding: 10px;
 	overflow: hidden;
+	font-size: 30px;
+
 }
 
 .menu-box {
@@ -109,16 +58,6 @@ background: #638A9E
 	border-radius: 2px;
 }
 
-.menu1{
-	margin: 0px;
-	padding: 0px;
-	font-size: 30px;
-	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
-}
-
-
-	
-
 .menu-icon::before {
 	
 	content:"";
@@ -134,7 +73,7 @@ background: #638A9E
 	margin-top: 0px;
 	transform: rotate(45deg)
 }
-
+	
 #menu-activate:checked + .menu-box, .menu-icon {
 	background: rgba(255, 255, 255, 0)
 }
@@ -164,9 +103,8 @@ background: #638A9E
 		width: 100%;
 		justify-content: center;
 		align-items: center;
-		
 	}
-	
+
 	#menu-activate ~ .menu1 li {
 		height: 0;
 		margin: 0;
@@ -190,9 +128,9 @@ background: #638A9E
 		padding: 0.5em;
 		width: 100%;
 		color: white;
-		background: #222;
+		background: #222;	
 	}
-
+	
 }
  .welcome h1 {
     font-family: "skope", serif;
@@ -208,7 +146,26 @@ background: #638A9E
 	justify-content: space-around;
 }
 
-	
-	
-	
-	
+
+.billede-tekst {
+  display: flex;           /* gør at elementerne står ved siden af hinanden */
+  align-items: center;     /* centrerer dem lodret */
+  gap: 20px;               /* giver luft mellem billedet og teksten */
+}
+
+.tekst img {
+  width: 300px;            /* ændr størrelsen som du vil */
+  height: auto;            /* bevar proportioner */
+}
+
+.text {
+  font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+  font-size: 20px;
+  color: white;
+}
+.tekst {
+  flex-direction: row-reverse;
+}
+	.forside {
+  float: right;   /* flytter billedet til højre side */
+}
