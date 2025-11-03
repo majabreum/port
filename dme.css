@@ -1,12 +1,13 @@
 @charset "utf-8";
 /* CSS Document */
 body{
-	 background-image: url("{9E5CB89E-C286-4A67-B518-D5E020C37B6F}.png")
+	background-image: url("Skærmbillede 2025-11-03 133510.png")
 }
 .red{
 	background: red;
 	width: 500px;
 	height: 50px;
+
 }
 .blue{
 	background: brown;
@@ -38,13 +39,7 @@ body{
 	justify-content: space-around;
 }
 
-.flexboxgalleri{
-	background-image: url("../{9E5CB89E-C286-4A67-B518-D5E020C37B6F}.png");
-	display: flex;
-	flex-flow: wrap;
-	flex-direction: row;
-	justify-content: space-around;
-}
+
 
 .text{
 	background-color: white;
@@ -76,7 +71,10 @@ background: #638A9E
 	
 	
 }
-
+.flexboxgalleri{
+	flex-flow: wrap;
+	justify-content: space-around;
+}
 .menu1 {
 	display: flex;
 	flex-direction: row;
@@ -209,3 +207,6 @@ background: #638A9E
 }
 
 
+	
+.anna {
+}

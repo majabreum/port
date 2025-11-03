@@ -1,8 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-body{
-	 background-image: url("{9E5CB89E-C286-4A67-B518-D5E020C37B6F}.png")
-}
+
 .red{
 	background: red;
 	width: 500px;
@@ -177,7 +175,6 @@ background: #638A9E
 	}
 	
 	#menu-activate:checked ~ .menu1 li {
-		border: 1px solid #333;
 		height: 2.5em;
 		padding: 0.5em;
 		transition: height 400ms;
@@ -209,3 +206,96 @@ background: #638A9E
 }
 
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.kontakt-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 900px;
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.kontakt-form {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+.kontakt-form label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.kontakt-form input,
+.kontakt-form textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.kontakt-form input:focus,
+.kontakt-form textarea:focus {
+	
+  outline: none;
+}
+
+.kontakt-form button {
+  padding: 12px;
+  background-color: #638A9E;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.kontakt-form button:hover {
+ 
+}
+
+.kontakt-info {
+  flex: 1;
+  min-width: 250px;
+}
+
+.kontakt-info h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #eee;
+  font-size: 0.9rem;
+}
