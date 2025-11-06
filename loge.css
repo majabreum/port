@@ -156,8 +156,29 @@ body{
     line-height: 1.5;
 }
 
-h2 {
-    margin-top: 0;
+.billede-container {
+  text-align: center; /* centrerer både billedet og teksten */
+  margin-top: 40px;
 }
 
-	
+.billede {
+  width: 400px; /* justér størrelsen på billedet */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.billedtekst {
+  color: white;
+  font-size: 20px;
+  margin-top: 15px; /* afstand mellem billede og tekst */
+}
+
+
+
+.logot {
+    background-color: black;
+    padding: 20px;
+    line-height: 1.5;
+	font-size: 25px;
+}
