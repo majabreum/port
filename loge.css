@@ -129,7 +129,7 @@ body{
 	}
 }
  .welcome h1 {
-    font-family: "skope", serif;
+    font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 	font-weight: 3300px;
 	font-style: normal;
 
@@ -159,5 +159,7 @@ body{
 h2 {
     margin-top: 0;
 }
-
+.p{
+	font-family: Baskerville, "Palatino Linotype", Palatino, "Century Schoolbook L", "Times New Roman", "serif";
+}
 	
