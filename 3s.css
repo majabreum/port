@@ -142,6 +142,60 @@ body{
 	flex-direction: row;
 	justify-content: space-around;
 
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* afstand mellem billede og tekst */
+    padding: 40px;
+}
 
+.foto {
+    width: 600px;  /* du kan justere størrelsen her */
+    height: auto;
+    border: 5px solid #fff; /* hvid ramme omkring billedet */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
 
+.tekst {
+    background-color: rgba(99,138,158,1.00);
+    padding: 20px;
+    max-width: 250px;
+    line-height: 1.5;
 	
+}
+
+.billede-container {
+  text-align: center; /* centrerer både billedet og teksten */
+  margin-top: 40px;
+}
+
+.billede {
+  width: 400px; /* justér størrelsen på billedet */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.billedtekst {
+  color: white;
+  font-size: 20px;
+  margin-top: 15px; /* afstand mellem billede og tekst */
+}
+
+
+
+.logot {
+    background-color:rgba(99,138,158,0.65);
+    padding: 20px;
+    line-height: 1.5;
+	font-size: 25px;
+}
+
+.line {
+	width: 100%;
+  height: 2px;       /* hvor tyk den skal være */
+  background-color: black; /* farven på linjen */
+  border: none;      /* fjerner standardkant */
+}
