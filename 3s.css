@@ -1,0 +1,147 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	 color: white; /* så teksten kan læses ovenpå den mørke farve */
+  font-size: 30px;
+	
+}
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+}
+
+.menu-bar {
+	
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	background: #638A9E;
+	color: white;
+	height: 10px;
+	padding: 1rem;
+}
+
+.menu1 {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+}
+
+.menu1 > li {
+	padding: 10px;
+	overflow: hidden;
+
+}
+
+.menu-box {
+	background: #638A9E;
+	height: 100%;
+	width: 30px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-icon, .menu-icon::before, .menu-icon::after {
+	display: block;
+	background: white;
+	position: absolute;
+	height: 4px;
+	width: 30px;
+	transition: transform 400ms;
+	border-radius: 2px;
+}
+
+.menu-icon::before {
+	
+	content:"";
+	margin-top: -8px;
+	
+}
+.menu-icon::after {
+	content:"";
+	margin-top: 8px;
+}
+
+#menu-activate:checked + .menu-box, .menu-icon::before {
+	margin-top: 0px;
+	transform: rotate(45deg)
+}
+	
+#menu-activate:checked + .menu-box, .menu-icon {
+	background: rgba(255, 255, 255, 0)
+}
+
+#menu-activate:checked + .menu-box, .menu-icon::after {
+	margin-top: 0px;
+	transform: rotate(-45deg)
+}
+
+#menu-activate {
+	
+	display: none;
+}
+
+@media(max-width: 700px) {
+	
+	.menu-box {
+		display: flex;
+	}
+	
+	.menu1 {
+		position: absolute;
+		top: 0;
+		margin-top: 100px;
+		left:0;
+		flex-direction: column;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#menu-activate ~ .menu1 li {
+		height: 0;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		transition: height 400ms;
+		display: none;
+	}
+	
+	#menu-activate:checked ~ .menu1 li {
+		border: 1px solid #333;
+		height: 2.5em;
+		padding: 0.5em;
+		transition: height 400ms;
+		display: block;
+	}
+	
+	.menu1 > li {
+		display: flex;
+		margin: 0;
+		padding: 0.5em;
+		width: 100%;
+		color: white;
+		background: #222;	
+	}
+}
+ .welcome h1 {
+    font-family: "skope", serif;
+	font-weight: 3300px;
+	font-style: normal;
+}
+
+.flexbox{
+	background:white;
+	display: flex;
+	flex-flow: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+
+
+
+	
