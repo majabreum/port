@@ -1,0 +1,350 @@
+@charset "utf-8";
+/* CSS Document */
+
+.purpose-section {
+  background: #000;
+  color: #fff;
+  padding: 4rem 3rem;
+}
+
+.purpose-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+}
+
+/* Venstre kolonne */
+.purpose-text {
+  flex: 1.3;
+  font-family: "cofo-sans-pixel", sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.purpose-text p + p {
+  margin-top: 0.9rem;
+}
+
+/* Overskrift FORMÅL */
+.purpose-heading {
+  font-family: "skope", "Press Start 2P", system-ui, sans-serif; /* skift til din egen */
+  font-size: 4rem;
+  letter-spacing: 0.15em;
+  color: #ffd800;
+  margin-bottom: 2rem;
+}
+
+/* Højre kolonne */
+.purpose-visual {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* Maze-rammen på højre side */
+.maze-frame {
+  position: relative;
+  width: 100%;
+  min-height: 380px;
+  border-left: 6px solid #ff0000;
+  border-top: 6px solid #003bff;
+  border-right: 6px solid #003bff;
+  border-bottom: none;
+  box-shadow: 0 0 0 2px #000;
+  padding: 1.5rem;
+}
+
+/* Små gule “prikker” langs indersiden af maze-rammen */
+.maze-frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 0;
+  height: 6px;
+  background-image: repeating-linear-gradient(
+    to right,
+    #fdb632 0,
+    #fdb632 4px,
+    transparent 4px,
+    transparent 10px
+  );
+}
+
+.maze-frame::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  bottom: 0;
+  width: 6px;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #fdb632 0,
+    #fdb632 4px,
+    transparent 4px,
+    transparent 10px
+  );
+}
+
+/* Pac-Man billede øverst til højre */
+.pacman-img {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  max-width: 160px;
+  height: auto;
+}
+
+/* Nederste område med dots + spøgelse */
+.bottom-path {
+  position: absolute;
+  bottom: 40px;
+  left: 10%;
+  right: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* række med små prikker */
+.dots-row {
+  flex: 1;
+  height: 6px;
+  margin-right: 20px;
+  background-image: repeating-linear-gradient(
+    to right,
+    #fdb632 0,
+    #fdb632 4px,
+    transparent 4px,
+    transparent 10px
+  );
+}
+
+/* Spøgelses-billede nederst */
+.ghost-img {
+  width: 60px;
+  height: auto;
+}
+
+/* RESPONSIVT: stack på mobil */
+@media (max-width: 900px) {
+  .purpose-inner {
+    flex-direction: column;
+  }
+
+  .purpose-visual {
+    order: -1; /* maze over teksten på mobil, hvis du vil */
+  }
+
+  .purpose-section {
+    padding: 3rem 1.5rem;
+  }
+}
+@charset "utf-8";
+/* CSS Document */
+body{
+  background-color:black;
+  min-height: 100vh;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.menu-bar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	background: #638A9E;
+	color: white;
+	height: 10px;
+	padding: 1rem;
+}
+
+.menu1 {
+	display: flex;
+	flex-direction: row;
+	list-style-type: none;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+
+}
+
+.menu1 > li {
+	padding: 10px;
+	overflow: hidden;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+
+}
+
+.menu-box {
+	background: #638A9E;
+	height: 100%;
+	width: 30px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.menu-icon, .menu-icon::before, .menu-icon::after {
+	display: block;
+	background: white;
+	position: absolute;
+	height: 4px;
+	width: 30px;
+	transition: transform 400ms;
+	border-radius: 2px;
+}
+
+.menu-icon::before {
+	
+	content:"";
+	margin-top: -8px;
+	
+}
+.menu-icon::after {
+	content:"";
+	margin-top: 8px;
+}
+
+#menu-activate:checked + .menu-box, .menu-icon::before {
+	margin-top: 0px;
+	transform: rotate(45deg)
+}
+	
+#menu-activate:checked + .menu-box, .menu-icon {
+	background: rgba(255, 255, 255, 0)
+}
+
+#menu-activate:checked + .menu-box, .menu-icon::after {
+	margin-top: 0px;
+	transform: rotate(-45deg)
+}
+
+#menu-activate {
+	
+	display: none;
+}
+
+@media(max-width: 700px) {
+	
+	.menu-box {
+		display: flex;
+	}
+	
+	.menu1 {
+		position: absolute;
+		top: 0;
+		margin-top: 100px;
+		left:0;
+		flex-direction: column;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#menu-activate ~ .menu1 li {
+		height: 0;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		transition: height 400ms;
+		display: none;
+	}
+	
+	#menu-activate:checked ~ .menu1 li {
+		border: 1px solid #333;
+		height: 2.5em;
+		padding: 0.5em;
+		transition: height 400ms;
+		display: block;
+	}
+	
+	.menu1 > li {
+		display: flex;
+		margin: 0;
+		padding: 0.5em;
+		width: 100%;
+		color: white;
+		background: #222;	
+	}
+}
+ .welcome h1 {
+    font-family: "skope", serif;
+	font-weight: 3300px;
+	font-style: normal;
+}
+
+.flexbox{
+	background:white;
+	display: flex;
+	flex-flow: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+}
+/* Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* NAVIGATION */
+.tab-nav {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.tab-link {
+    font-family: "Press Start 2P", sans-serif; /* Retro pixel font */
+    background: #003cff;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    display: inline-block;
+    transition: 0.2s ease;
+    border: 2px solid #ffffff33; /* let pixel-streg */
+}
+
+/* Hover-effekt */
+.tab-link:hover {
+    background: #005eff;
+    transform: translateY(-3px);
+    box-shadow: 0 0 10px #1a75ff, 0 0 20px #1a75ff;
+}
+
+/* Aktiv side */
+.tab-link.active {
+    background: #0078ff;
+    box-shadow: 0 0 12px #1a90ff, 0 0 25px #1a90ff;
+    border-color: #fff;
+}
+
+.tekst {
+	font-size: 25px;
+  font-family: "cofo-sans-pixel", sans-serif;
+}
+.billede {
+	position: absolute;
+  top: 420px;            
+  left: 850px;
+  width: 400px;
+  height: auto;
+  display: block;
+	
+}
