@@ -1,5 +1,16 @@
 @charset "utf-8";
 /* CSS Document */
+body{
+  background-color:black;
+  min-height: 100vh;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
 
 .purpose-section {
   background: #000;
@@ -135,27 +146,11 @@
     flex-direction: column;
   }
 
-  .purpose-visual {
-    order: -1; /* maze over teksten på mobil, hvis du vil */
-  }
-
   .purpose-section {
     padding: 3rem 1.5rem;
   }
 }
 @charset "utf-8";
-/* CSS Document */
-body{
-  background-color:black;
-  min-height: 100vh;
-  color: white;
-  font-family: "Montserrat", sans-serif;
-}
-
-* {
-	margin: 0px;
-	padding: 0px;
-}
 
 .menu-bar {
 	display: flex;

@@ -1,147 +1,3 @@
-/* FORMÅL-SEKTION – LAYOUT */
-.purpose-section {
-  background: #000;
-  color: #fff;
-  padding: 4rem 3rem;
-}
-
-.purpose-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  gap: 3rem;
-}
-
-/* Venstre kolonne */
-.purpose-text {
-  flex: 1.3;
-  font-family: "cofo-sans-pixel", sans-serif;
-  font-size: 18px;
-  line-height: 1.7;
-}
-
-.purpose-text p + p {
-  margin-top: 0.9rem;
-}
-
-/* Overskrift FORMÅL */
-.purpose-heading {
-  font-family: "skope", "Press Start 2P", system-ui, sans-serif; /* skift til din egen */
-  font-size: 4rem;
-  letter-spacing: 0.15em;
-  color: #ffd800;
-  margin-bottom: 2rem;
-}
-
-/* Højre kolonne */
-.purpose-visual {
-  flex: 1;
-  display: flex;
-  align-items: stretch;
-  justify-content: center;
-}
-
-/* Maze-rammen på højre side */
-.maze-frame {
-  position: relative;
-  width: 100%;
-  min-height: 380px;
-  border-left: 6px solid #ff0000;
-  border-top: 6px solid #003bff;
-  border-right: 6px solid #003bff;
-  border-bottom: none;
-  box-shadow: 0 0 0 2px #000;
-  padding: 1.5rem;
-}
-
-/* Små gule “prikker” langs indersiden af maze-rammen */
-.maze-frame::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  right: 0;
-  height: 6px;
-  background-image: repeating-linear-gradient(
-    to right,
-    #fdb632 0,
-    #fdb632 4px,
-    transparent 4px,
-    transparent 10px
-  );
-}
-
-.maze-frame::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  bottom: 0;
-  width: 6px;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    #fdb632 0,
-    #fdb632 4px,
-    transparent 4px,
-    transparent 10px
-  );
-}
-
-/* Pac-Man billede øverst til højre */
-.pacman-img {
-  position: absolute;
-  top: 40px;
-  right: 40px;
-  max-width: 160px;
-  height: auto;
-}
-
-/* Nederste område med dots + spøgelse */
-.bottom-path {
-  position: absolute;
-  bottom: 40px;
-  left: 10%;
-  right: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-/* række med små prikker */
-.dots-row {
-  flex: 1;
-  height: 6px;
-  margin-right: 20px;
-  background-image: repeating-linear-gradient(
-    to right,
-    #fdb632 0,
-    #fdb632 4px,
-    transparent 4px,
-    transparent 10px
-  );
-}
-
-/* Spøgelses-billede nederst */
-.ghost-img {
-  width: 60px;
-  height: auto;
-}
-
-/* RESPONSIVT: stack på mobil */
-@media (max-width: 900px) {
-  .purpose-inner {
-    flex-direction: column;
-  }
-
-  .purpose-visual {
-    order: -1; /* maze over teksten på mobil, hvis du vil */
-  }
-
-  .purpose-section {
-    padding: 3rem 1.5rem;
-  }
-}
-@charset "utf-8";
 /* CSS Document */
 body{
   background-color:black;
@@ -153,6 +9,48 @@ body{
 * {
 	margin: 0px;
 	padding: 0px;
+}
+
+.purpose-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+}
+
+/* spøgelserne placering */
+.ghosts-layout {
+  display: grid;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+/* Højre kolonne */
+.purpose-visual {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+
+/* Pac-Man billede øverst til højre */
+.pacman-img {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  max-width: 160px;
+  height: auto;
+}
+
+/* RESPONSIVT: stack på mobil */
+@media (max-width: 900px) {
+  .purpose-inner {
+    flex-direction: column;
+  }
+
+  .purpose-section {
+    padding: 3rem 1.5rem;
+  }
 }
 
 .menu-bar {
@@ -230,7 +128,7 @@ body{
 	
 	display: none;
 }
-
+/*menu baren responsive*/
 @media(max-width: 700px) {
 	
 	.menu-box {
@@ -274,6 +172,7 @@ body{
 		background: #222;	
 	}
 }
+
  .welcome h1 {
     font-family: "skope", serif;
 	font-weight: 3300px;
@@ -287,6 +186,7 @@ body{
 	flex-direction: row;
 	justify-content: space-around;
 }
+
 /* Reset */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -294,13 +194,13 @@ body{
   padding: 0;
 }
 
+/* gør navbar hvid */
 a {
   color: inherit;
   text-decoration: none;
 }
 
 /* NAVBAR */
-
 .navbar {
   background: #061a3a;
   border-bottom: 3px solid #000;
@@ -311,6 +211,7 @@ a {
 font-weight: 400;
 font-style: normal;
 }
+/* NAVBAR bredte */
 .nav-inner {
   max-width: 1100px;
   margin: 0 auto;
@@ -352,20 +253,17 @@ font-style: normal;
   padding: 0 1.5rem;
 }
 
+/*titlerne størrelse og placering*/
 .om-spillet-grid {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: 2rem;
   
 }
-
-/* OVERSKRIFT */
-.section-title {
-  font-family: "Press Start 2P";
-  font-size: 2.3rem;
-  color: #ffd800;
-  letter-spacing: 0.12em;
-  margin-bottom: 1.5rem;
+/* fruits og powerpills */
+.ghosts-grid {
+  display: grid;
+  gap: 1.5rem;
 }
 
 /* TEKST */
@@ -377,11 +275,7 @@ font-style: normal;
 }
 
 
-.section-text p + p {
-  margin-top: 1rem;
-}
-
-/* Maze sektion */
+/* Maze grid */
 .maze-wrapper {
   position: relative;
   width: 100%;
@@ -400,64 +294,11 @@ font-style: normal;
   background-size: 40px 40px;
 }
 
-.maze-dots {
-  position: absolute;
-  inset: 15% 12%;
-  border: 2px solid #003cff;
-  border-radius: 8px;
-}
-
-.maze-dots::before {
-  content: "";
-  position: absolute;
-  inset: 10%;
-  background-image: radial-gradient(circle, #ffd800 2px, transparent 2px);
-  background-size: 20px 20px;
-}
-
-.mini-pacman {
-  position: absolute;
-  bottom: 15%;
-  left: 18%;
-  width: 28px;
-  height: 28px;
-  background: #ffd800;
-  border-radius: 50%;
-  clip-path: polygon(20% 0%, 100% 45%, 100% 55%, 20% 100%, 0% 50%);
-}
-
-/* Ghost box */
-.ghost-box {
-  position: absolute;
-  top: 40%;
-  left: 55%;
-  width: 120px;
-  height: 70px;
-  border: 2px solid #00aaff;
-  border-radius: 8px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background: rgba(0,0,40,0.75);
-}
-
-.tiny-ghost {
-  width: 20px;
-  height: 24px;
-  border-radius: 10px 10px 4px 4px;
-  background: #fff;
-}
-
 /* Farver */
 .tiny-ghost:nth-child(1) { background: #ff0000; }
 .tiny-ghost:nth-child(2) { background: #ff9ed1; }
 .tiny-ghost:nth-child(3) { background: #00e0ff; }
 .tiny-ghost:nth-child(4) { background: #ffb852; }
-
-/* SPØGELSER-SEKTION */
-.ghosts-section {
-  margin-top: 3.5rem;
-}
 
 .ghosts-heading {
 	font-family: "cofo-sans-pixel", sans-serif;
@@ -473,17 +314,6 @@ font-weight: 400;
 font-style: normal;
 	font-size: 20px;
 	
-}
-.ghosts-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-}
-
-.ghost-card {
-  text-align: center;
-  font-family: "Press Start 2P";
-  font-size: 0.6rem;
 }
 
 /* Store ghosts */
@@ -509,13 +339,6 @@ font-style: normal;
   justify-content: space-between;
 }
 
-.ghost-foot {
-  width: 12px;
-  height: 10px;
-  background: inherit;
-  border-radius: 0 0 10px 10px;
-}
-
 .ghost-pupil {
   width: 8px;
   height: 8px;
@@ -530,18 +353,6 @@ font-style: normal;
 }
 /* ===== Spøgelserne – layout ===== */
 
-.ghosts-section {
-  margin: 4rem auto 5rem;
-  max-width: 1100px;
-  padding: 0 1.5rem;
-}
-
-.ghosts-layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
-  gap: 2.5rem;
-  align-items: flex-start;
-}
 
 @media (max-width: 900px) {
   .ghosts-layout {
@@ -555,21 +366,12 @@ font-style: normal;
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-}
 
-@media (max-width: 900px) {
-  .ghosts-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 .ghost-card h3 {
 	font-size:20px;
 	font-family:"cofo-sans-pixel", sans-serif;
 
-}
-@media (max-width: 600px) {
-  .ghosts-grid {
-  }
 }
 /* FORMÅL-SEKTION - overordnet */
 .formaal-section {
@@ -594,13 +396,11 @@ font-style: normal;
   line-height: 1.8;
   font-size: 18px;
 }
-
-.formaal-title {
-  font-family: "Press Start 2P", "skope", sans-serif;
-  font-size: 4rem;
-  color: #ffd800;
-  margin-bottom: 1.8rem;
-  letter-spacing: 0.12em;
+/*spørgelser navne*/
+.ghost-card {
+  text-align: center;
+  font-family: "Press Start 2P";
+  font-size: 0.6rem;
 }
 
 /* HØJRE VISUEL KOLONNE */
@@ -627,52 +427,17 @@ font-style: normal;
   border-radius: 6px 6px 0 0;
 }
 
-/* Lodret prik-linje langs venstre inderside */
-.maze-vertical-dots {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 12px; /* afstand fra kant så prikkerne sidder inde i rammen */
-  width: 6px;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    #fdb632 0,
-    #fdb632 6px,
-    transparent 6px,
-    transparent 14px
-  );
-  opacity: 1;
-}
-
-/* Vandret prik-linje (eksempel øverst i rammen) */
-.maze-horizontal-dots {
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  top: 36px;   /* justér hvor den skal være */
-  height: 8px;
-  background-image: repeating-linear-gradient(
-    to right,
-    #fdb632 0,
-    #fdb632 6px,
-    transparent 6px,
-    transparent 14px
-  );
-}
-
+/*pac-man billede på formål*/
 .pacman-big {
   position: absolute;
   top: 330px;            
   left: 70%;
   transform: translateX(-50%);
-  max-width: 500px;
-  height: auto;
-  pointer-events: none;
 }
 
 .ghost-small {
 position: absolute;
-  top: 730px;            
+  top: 740px;            
   left: 58%;
   width: 200px;
   height: auto;
@@ -685,12 +450,6 @@ position: absolute;
     flex-direction: column-reverse; /* grafik under teksten */
     align-items: center;
   }
-
-  .formaal-left {
-    width: 100%;
-    flex-basis: auto;
-  }
-
 
   .pacman-big {
     max-width: 160px;
@@ -716,7 +475,7 @@ position: absolute;
 }
 .switch{
 	position: absolute;
-  top: 960px;            
+  top: 890px;            
   left: 660px;
   width: 300px;
   height: auto;
