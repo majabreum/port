@@ -19,10 +19,18 @@ body{
 }
 
 /* spøgelserne placering */
-.ghosts-layout {
-  display: grid;
-  gap: 2.5rem;
-  align-items: flex-start;
+.ghosts-grid {
+  position: absolute;
+  top: 1000px;
+  right: 40px; /* står nu til højre */
+  width: 200px;
+}
+.ghosts-section {
+  padding-right: 130px; /*teksten står ikke i spøgelserne*/
+}
+
+  .ghosts-grid {
+    justify-content: right;
 }
 /* Højre kolonne */
 .purpose-visual {
